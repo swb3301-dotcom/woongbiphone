@@ -19,7 +19,8 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans KR', sans-serif;
-    line-height: 1.6;
+    font-size: 17px;
+    line-height: 1.7;
     color: var(--text-color);
     background-color: var(--bg-color);
     overflow-x: hidden;
@@ -75,7 +76,7 @@ body {
 .nav-link {
     text-decoration: none;
     color: var(--text-color);
-    font-weight: 400;
+    font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
 }
@@ -149,15 +150,15 @@ body {
 
 
 .hero-title {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 700;
+    font-size: clamp(2.75rem, 5vw, 3.8rem);
+    font-weight: 800;
     margin-bottom: 1.5rem;
     color: var(--primary-color);
     letter-spacing: -0.02em;
 }
 
 .hero-subtitle {
-    font-size: clamp(1.125rem, 2vw, 1.5rem);
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
     color: var(--secondary-color);
     margin-bottom: 3rem;
     font-weight: 300;
@@ -174,7 +175,7 @@ body {
     padding: 1rem 2.5rem;
     text-decoration: none;
     border-radius: 50px;
-    font-weight: 500;
+    font-weight: 600;
     transition: all 0.3s ease;
     display: inline-block;
     border: 2px solid transparent;
@@ -219,12 +220,12 @@ section {
 }
 
 .section-title {
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 700;
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    font-weight: 800;
     text-align: center;
     margin-bottom: 4rem;
     color: var(--primary-color);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.015em;
 }
 
 /* 서비스 섹션 */
@@ -259,8 +260,8 @@ section {
 }
 
 .service-card h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 1.6rem;
+    font-weight: 700;
     margin-bottom: 1rem;
     color: var(--primary-color);
 }
@@ -362,7 +363,7 @@ section {
 }
 
 .about-item p {
-    font-size: 1.125rem;
+    font-size: 1.15rem;
     color: var(--secondary-color);
     line-height: 1.8;
 }
@@ -399,8 +400,8 @@ section {
 }
 
 .contact-item h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
+    font-size: 1.3rem;
+    font-weight: 700;
     margin-bottom: 1rem;
     color: var(--primary-color);
 }
