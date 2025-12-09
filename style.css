@@ -233,6 +233,46 @@ section {
     background-color: var(--bg-color);
 }
 
+.news {
+    background-color: var(--light-bg);
+}
+
+.news-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.news-subtitle {
+    color: var(--secondary-color);
+    font-size: 1.05rem;
+}
+
+.news-card {
+    max-width: 720px;
+    margin: 0 auto;
+    background-color: var(--bg-color);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.news-body {
+    text-align: center;
+}
+
+.news-body h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+}
+
+.news-body p {
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
