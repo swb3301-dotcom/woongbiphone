@@ -75,7 +75,7 @@ animateElements.forEach(el => {
 // 현재 섹션 하이라이트
 const sections = document.querySelectorAll('section[id]');
 
-window.addEventListener('scroll', () => {
+function updateActiveNav() {
     const scrollY = window.pageYOffset;
 
     sections.forEach(section => {
@@ -83,16 +83,23 @@ window.addEventListener('scroll', () => {
         const sectionTop = section.offsetTop - 100;
         const sectionId = section.getAttribute('id');
 
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            navLinks.forEach(link => {
+        const inView = scrollY > sectionTop && scrollY <= sectionTop + sectionHeight;
+
+        navLinks.forEach(link => {
+            const matches = link.getAttribute('href') === `#${sectionId}`;
+            if (matches && inView) {
+                link.classList.add('active');
+                link.setAttribute('aria-current', 'true');
+            } else if (matches) {
                 link.classList.remove('active');
-                if (link.getAttribute('href') === `#${sectionId}`) {
-                    link.classList.add('active');
-                }
-            });
-        }
+                link.removeAttribute('aria-current');
+            }
+        });
     });
-});
+}
+
+window.addEventListener('scroll', updateActiveNav);
+window.addEventListener('load', updateActiveNav);
 
 // 페이지 로드 시 애니메이션
 window.addEventListener('load', () => {
